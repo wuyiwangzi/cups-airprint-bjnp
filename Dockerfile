@@ -1,25 +1,15 @@
-FROM alpine:latest
+FROM ubuntu:bionic
 
 # Install the packages we need. Avahi will be included
-RUN echo "http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories &&\
-	apk add --update cups \
-	cups-libs \
+RUN apt-get update && apt-get install -y \
+	cups \
 	cups-pdf \
-	cups-client \
-	cups-filters \
-	cups-dev \
 	ghostscript \
-	avahi \
+	avahi-daemon \
 	inotify-tools \
-	python \
-	python-dev \
-	py-pip \
-	build-base \
-	wget \
 	rsync \
-	&& pip --no-cache-dir install --upgrade pip \
-	&& pip install pycups \
-	&& rm -rf /var/cache/apk/*
+	python-cups \
+	python-lxml
 
 # This will use port 631
 EXPOSE 631
