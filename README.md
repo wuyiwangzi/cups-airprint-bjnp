@@ -1,4 +1,4 @@
-# thosch66/cups-airprint-bjnp
+# thoschworks/cups-airprint-bjnp
 
 Fork from [chuckcharlie/cups-avahi-airprint](https://github.com/chuckcharlie/cups-avahi-airprint)
 
