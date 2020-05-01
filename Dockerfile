@@ -9,7 +9,8 @@ RUN apt-get update && apt-get install -y \
 	inotify-tools \
 	rsync \
 	python-cups \
-	python-lxml
+	python-lxml \
+	cups-backend-bjnp
 
 # This will use port 631
 EXPOSE 631
