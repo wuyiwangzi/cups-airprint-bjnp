@@ -8,8 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      – name: checkout code
-        uses: actions/checkout@v2
+      – uses: actions/checkout@v2
         with:
           ref: master
       – name: install buildx
