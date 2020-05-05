@@ -10,7 +10,8 @@ RUN apt-get update && apt-get install -y \
 	rsync \
 	python-cups \
 	python-lxml \
-	cups-backend-bjnp
+	cups-backend-bjnp \
+	printer-driver-brlaser
 
 # This will use port 631
 EXPOSE 631
