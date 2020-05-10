@@ -1,7 +1,7 @@
 FROM ubuntu:bionic
 
 # Install the packages we need. Avahi will be included
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
 	cups \
 	cups-pdf \
 	ghostscript \
@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
 	rsync \
 	python-cups \
 	python-lxml \
+	tzdata \
 	cups-backend-bjnp \
 	printer-driver-brlaser
 

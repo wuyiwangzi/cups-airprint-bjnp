@@ -11,10 +11,10 @@ This "reUbuntunized" Docker image runs a CUPS instance that is meant as an AirPr
 * `/services`: where the Avahi service files will be generated
 
 ### Variables:
-* `CUPSADMIN`: the CUPS admin user you want created
-* `CUPSPASSWORD`: the password for the CUPS admin user
+* `CUPSADMIN`: the CUPS admin user you want created, if not set, the default "cupsadmin" will be used
+* `CUPSPASSWORD`: the password for the CUPS admin user, if no set, the name of the admin user will be used
+* `TZ`: the local time zone in the _Area/Location_-Format like "Europe/Berlin" to adjust the time stamps in the job list to the local tine, if not set, UTC will be used
 
-If CUPSADMIN is not set, the default "cupsadmin" will be used. If CUPSPASSWORD is no set, the name of the admin user will be used.
 
 ### Ports/Network:
 * Must be run on host network. This is required to support multicasting which is needed for Airprint.
@@ -26,6 +26,7 @@ docker run --name cups --restart unless-stopped  --net host\
   -v <your config dir>:/config \
   -e CUPSADMIN="<username>" \
   -e CUPSPASSWORD="<password>" \
+  -e TZ="<timezone>" \
   thoschworks/cups-airprint-bjnp:latest
 ```
 
