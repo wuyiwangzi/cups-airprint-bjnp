@@ -2,14 +2,15 @@ FROM ubuntu:focal
 
 # Install the packages we need. Avahi will be included
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+	python \
 	cups \
 	cups-pdf \
 	ghostscript \
 	avahi-daemon \
 	inotify-tools \
 	rsync \
-	python3-cups \
-	python3-lxml \
+	python-cups \
+	python-lxml \
 	tzdata \
 	cups-backend-bjnp \
 	printer-driver-brlaser
