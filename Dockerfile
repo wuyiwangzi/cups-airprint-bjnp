@@ -8,8 +8,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
 	avahi-daemon \
 	inotify-tools \
 	rsync \
-	python-cups \
-	python-lxml \
+	python3-cups \
+	python3-lxml \
 	tzdata \
 	cups-backend-bjnp \
 	printer-driver-brlaser
