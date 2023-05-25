@@ -125,7 +125,7 @@ class AirPrintGenerate(object):
         for p, v in printers.items():
             if v['printer-is-shared']:
                 attrs = conn.getPrinterAttributes(p)
-                uri = urlparse.urlparse(v['printer-uri-supported'])
+                uri = parse.urlparse(v['printer-uri-supported'])
 
                 tree = ElementTree()
                 tree.parse(StringIO(XML_TEMPLATE.replace('\n', '').replace('\r', '').replace('\t', '')))
