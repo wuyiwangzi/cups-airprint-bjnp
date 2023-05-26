@@ -1,6 +1,6 @@
-# thoschworks/cups-airprint-bjnp
+# wuyiwangzi/cups-airprint-bjnp
 
-Fork from [chuckcharlie/cups-avahi-airprint](https://github.com/chuckcharlie/cups-avahi-airprint)
+Fork from [thoschworks/cups-airprint-bjnp](https://github.com/thoschworks/cups-airprint-bjnp)
 
 This "reUbuntunized" Docker image runs a CUPS instance that is meant as an AirPrint relay for printers that are already on the network but not AirPrint capable. I forked [_chuckcharlie's_ project](https://github.com/chuckcharlie/cups-avahi-airprint) because I need the support for Canon printers using the proprietary USB over IP BJNP protocol. I switches back to _Ubuntu_ as base OS because I was not able to add the package [`cups-backend-bjnp`](https://launchpad.net/ubuntu/+source/cups-bjnp) to the Alpine version.
 
